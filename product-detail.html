@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Tech Store</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            Tech Store
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+         <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="Index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="products.html">
+                        Products
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<section class="container py-5">
+
+    <div class="row align-items-center">
+
+        <div class="col-lg-5">
+
+            <img id="productImage"
+            class="img-fluid rounded product-image"
+            alt="Product">
+                
+        </div>
+
+        <div class="col-lg-7">
+
+            <h1 id="productName"></h1>
+
+           <p id="productDescription"></p>
+
+           <h3 id="productPrice"></h3>
+
+            <label class="form-label">
+                Quantity
+            </label>
+
+            <input type="number"
+                   class="form-control w-25 mb-3"
+                   value="1"
+                   min="1">
+
+            <button class="btn btn-success">
+                Add To Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+<footer class="bg-dark text-white text-center py-4 mt-5">
+
+    <p class="mb-0">
+        © 2026 Tech Store. All Rights Reserved.
+    </p>
+
+</footer>
+<script>
+
+document.getElementById("productName").innerText =
+localStorage.getItem("productName");
+
+document.getElementById("productPrice").innerText =
+localStorage.getItem("productPrice");
+
+document.getElementById("productDescription").innerText =
+localStorage.getItem("productDescription");
+
+document.getElementById("productImage").src =
+localStorage.getItem("productImage");
+
+</script>
+</body>
